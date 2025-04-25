@@ -1,0 +1,79 @@
+/* === Sidebar Wrapper === */
+    .sidebar {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+        color: white;
+        overflow: hidden; /* ✅ hides overflowing content */
+        transition: width 0.3s ease;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+        z-index: 999;
+      }
+      
+      .sidebar.open {
+        width: 250px;
+        padding: 20px 0;
+      }
+      
+      .sidebar.collapsed {
+        width: 0;           /* ✅ fully collapse */
+        padding: 0 !important;
+      }
+      
+  /* === Logo / Title === */
+  .sidebar h4 {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 20px 10px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  /* === Navigation Links === */
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar .nav-link {
+    display: block;
+    color: #cfd8dc;
+    padding: 12px 20px;
+    margin: 2px 0;
+    text-decoration: none;
+    border-left: 4px solid transparent;
+    transition: all 0.2s ease-in-out;
+    font-size: 15px;
+  }
+  
+  .sidebar .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-left: 4px solid #4dd0e1;
+    color: #fff;
+  }
+  
+  /* === Toggle Button === */
+  .toggle-btn {
+    position: fixed;
+    top: 15px;
+    left: 260px;
+    z-index: 1000;
+    transition: left 0.3s ease;
+    padding: 6px 10px;
+    font-size: 18px;
+    background-color: #ffffff;  /* ✅ white background */
+    color: #000000;             /* ✅ black icon color */
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  .sidebar.collapsed ~ .toggle-btn {
+    left: 10px;
+  }
+  
+  
